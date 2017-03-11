@@ -59,19 +59,26 @@ video {
 
 
 @media (min-width: 1200px) {
-  
+
+  div.lgFirstRow {
+      background-color: #e6e6e6;
+      width: 404px;
+      border: 2px solid #e6e6e6;
+      height: 120px;
+      /*opacity: .6;*/
+  }  
   div.lgSecondRow {
       background-color: #e6e6e6;
       width: 404px;
       border: 2px solid #e6e6e6;
-      height: 180px;
+      height: 200px;
       /*opacity: .6;*/
   }
   div.lgThridRow  {
       background-color: #e6e6e6;
       width: 404px;
       border: 2px solid #e6e6e6;
-      height: 140px;
+      height: 160px;
   }
   div.lgFourthRow{
       background-color: #e6e6e6;
@@ -84,29 +91,35 @@ video {
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
   
-  div.mdSecondRow{
-      background-color: #e6e6e6;
-      width: 404px;
-      border: 2px solid #e6e6e6;
-      height: 160px;
-  }
-  div.mdThirdRow{
-      background-color: #e6e6e6;
-      width: 404px;
-      border: 2px solid #e6e6e6;
-      height: 180px;
-  }
-  div.mdFourthRow{
+    div.mdFirstRow{
       background-color: #e6e6e6;
       width: 404px;
       border: 2px solid #e6e6e6;
       height: 120px;
   }
+  div.mdSecondRow{
+      background-color: #e6e6e6;
+      width: 404px;
+      border: 2px solid #e6e6e6;
+      height: 180px;
+  }
+  div.mdThirdRow{
+      background-color: #e6e6e6;
+      width: 404px;
+      border: 2px solid #e6e6e6;
+      height: 200px;
+  }
+  div.mdFourthRow{
+      background-color: #e6e6e6;
+      width: 404px;
+      border: 2px solid #e6e6e6;
+      height: 140px;
+  }
   div.mdFivthRow{
       background-color: #e6e6e6;
       width: 404px;
       border: 2px solid #e6e6e6;
-      height: 160px;
+      height: 180px;
   }
   div.mdSixthRow{
       background-color: #e6e6e6;
@@ -118,7 +131,7 @@ video {
       background-color: #e6e6e6;
       width: 404px;
       border: 2px solid #e6e6e6;
-      height: 150px;
+      height: 170px;
   }
  
 
