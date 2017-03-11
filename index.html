@@ -3,11 +3,12 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DSP application</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 	<style type="text/css">
@@ -16,7 +17,9 @@
 </head>
 <body>
 
-	<div class="page-header" id="header">
+<div class="container col-md-12 col-lg-12 col-sm-12 col-xs-12">
+	<div class="row">
+	<div class="page-header col-md-12 col-lg-12 col-sm-12 col-xs-12" id="header">
   		<h1>Digital Image Processing <small>Filtering and Canny Edge Detection Applications</small></h1>
   		<ul class="list-inline pull-right">
   		<li><a href="mailto:hussamss@uvic.ca"><img src="images/email-32.png"></a></li>
@@ -25,6 +28,10 @@
         <li><a href="https://hussamss.github.io/" target="blank"><img src="images/website-optimization-2-32.png"></a></li>
         </ul>
 	</div>
+	</div>
+</div>
+<br>
+<br>
 <div id="allContent">
 <div class="container-fuild">
 	<div class="well head center-block" id="headContent">
@@ -55,11 +62,11 @@
 
 	<div class="container video mainContainer col-md-12 col-lg-12 col-sm-12 col-xs-12" hidden="true" >
 		<div class="row">
-			<video  class="center-block" id="video" width="400" height="400" autoplay="true"></video>
+			<video  class="center-block" id="video" width="" height="" autoplay="true"></video>
 			<br>
 			<button class="center-block" id="snap">Snap Photo</button>
 			<br>
-			<canvas class="center-block" id="myImage" width="400" height="400"></canvas>
+			<canvas class="center-block" id="myImage" width="" height=""></canvas>
 			<br>
 		</div>
 	</div>
@@ -68,10 +75,10 @@
 
 	<div class="container sqrImage mainContainer col-md-12 col-lg-12 col-sm-12 col-xs-12" hidden="true" >
 		<div class="row">
-			<img id="img1"  class="center-block imgCon" src="sqr.jpg" width="400", height="400">
+			<img id="img1"  class="center-block imgCon" src="sqr.jpg" width="", height="">
 			<br>
 			
-			<canvas class="center-block" id="myImage1" width="400" height="400"></canvas>
+			<canvas class="center-block" id="myImage1" width="" height=""></canvas>
 			<br>
 		</div>
 	</div>
@@ -79,12 +86,12 @@
 
 	<div class="container circleImage mainContainer col-md-12 col-lg-12 col-sm-12 col-xs-12" hidden="true" >
 		<div class="row">
-			<img  id="img2" class="center-block imgCon" src="circles.jpg" width="400", height="400">
+			<img  id="img2" class="center-block imgCon" src="circles.jpg" width="", height="">
 			<br>
-			<canvas class="center-block" id="myImage2" width="400" height="400"></canvas>
+			<canvas class="center-block" id="myImage2" width="" height=""></canvas>
 			<br>
 			<div class="well center-block text-center">
-			Thie is a (400 x 400) RGB image (Colored Image). Any color in general can be formed by combining (R,G,B). For example, White color is equivalent to (R=255, G=255, B=255). On the other hand, Black color is equivalent (R=0, G=0, B=0). Notice that this image consists of two red circles, two green circle, and two blue circles. When, the two different circles overlap, another color is formed; notice (red and green = yellow); yellow is equivalent to (R=255, G=255, B=0). Moreover, when the three circles overlap, you can see a while color.	
+			Thie is a ( x ) RGB image (Colored Image). Any color in general can be formed by combining (R,G,B). For example, White color is equivalent to (R=255, G=255, B=255). On the other hand, Black color is equivalent (R=0, G=0, B=0). Notice that this image consists of two red circles, two green circle, and two blue circles. When, the two different circles overlap, another color is formed; notice (red and green = yellow); yellow is equivalent to (R=255, G=255, B=0). Moreover, when the three circles overlap, you can see a while color.	
 			</div>
 		</div>
 	</div>
@@ -95,7 +102,7 @@
 		<div class="row">
 
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="red" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="red" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center lgFirstRow mdFirstRow">
 				In this operation (filter), the red part of image is extracted while the green and blue parts are ignored. 
@@ -106,7 +113,7 @@
 	</div>	
 
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="green" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="green" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center lgFirstRow mdFirstRow">
 				In this operation (filter), the green part of image is extracted while the red and blue parts are ignored. 
@@ -116,7 +123,7 @@
 	</div>
 
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="blue" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="blue" width="" height="" class="center-block image-canvas"></canvas>
 				<br>
 		<div class="well center-block text-center lgFirstRow mdSecondRow">
 				In this operation (filter), the blue part of image is extracted while the red and green are ignored. 
@@ -135,7 +142,7 @@
 <!-- 	<div class="container col-md-12 col-lg-12 col-sm-12 col-xs-12"  >
 		<div class="row"> -->
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="gray" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="gray" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center lgSecondRow mdSecondRow">
 				A gray scale image can be obtained from RGB image using many algorithms such as averging of RGB pixels or <!-- which the gray scale images' new R, G, and B pixels equal to average (R/3 + G/3 + B/3). --> luminosity method <!-- averages the pixel values and --> accounts for human perception. We’re more sensitive to green, so green is weighted heavily, luminosity formula is 0.21 R + 0.72 G + 0.07 B.
@@ -145,7 +152,7 @@
 	</div>	
 
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="sepia" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="sepia" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center lgSecondRow mdThirdRow">
 				Sepia is a reddish-brown color. Sepia effects gives an image a new image tone in which the picture appears in shades of brown as opposed to greyscale as in a black-and-white image. Compare the Grayscale image with Sepia image
@@ -155,7 +162,7 @@
 	</div>
 
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="invert" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="invert" width="" height="" class="center-block image-canvas"></canvas>
 				<br>
 				<div class="well center-block text-center lgSecondRow mdThirdRow">
 				Inverting an image RGB colors result in color inverse (white goes to black and black goes to white). The invert RGB image is achieved by subtracting the maximum pixel values 255 from each color chaneel. The (new image R = 255 - original R), (new image G = 255 - original G), and (new image B = 255 - original B).
@@ -173,7 +180,7 @@
 <!-- 	<div class="container col-md-12 col-lg-12 col-sm-12 col-xs-12"  >
 		<div class="row"> -->
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="threshold" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="threshold" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block lgThridRow text-center mdFourthRow">
 				Thresholding is the simplest method of image segmentation. From a grayscale image, thresholding can be used to create binary images black <!-- and white values (0, 255). In thresholding, a threshold value is compared with the gray scale pixel, if threshold is bigger then sets pixel to 0; otherwise, set to 255. -->
@@ -190,7 +197,7 @@
 <!-- 	<div class="container col-md-12 col-lg-12 col-sm-12 col-xs-12"  >
 		<div class="row"> -->
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="gaussian3" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="gaussian3" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block lgThridRow text-center mdFourthRow">
 				Gaussian blur (Gaussian smoothing - lowpass) is the result of blurring an image by a Gaussian function. It is a widely used effect <!-- in image processing and graphics software, typically to reduce image noise and reduce detail. -->
@@ -200,7 +207,7 @@
 	</div>	
 
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="gaussian5" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="gaussian5" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block lgThridRow text-center mdFivthRow">
 				<!-- Gaussian blur is the result of blurring an image by a Gaussian function. --> The bigger the function, the more blur the filtered image becomes. In this operation, 5x5 gaussian blur function applied to the image, notice the image is more blured than the previous 3x3 gaussian filtered image 
@@ -210,7 +217,7 @@
 	</div>
 
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="highpass" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="highpass" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block lgFourthRow text-center mdFivthRow">
 				Generally High Pass filter, passes the high frequencies and rejects the low frequencies. In image processing, high frequency represents the details of the image such as (the edge) and the low frequency represents the contents of the image. 
@@ -227,7 +234,7 @@
 <!-- 	<div class="container col-md-12 col-lg-12 col-sm-12 col-xs-12"  >
 		<div class="row"> -->
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="sharpen" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="sharpen" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block lgFourthRow text-center mdSixthRow">
 				In image processing, sharpening refers to any enhancement technique that highlights edges and fine details in an image. Image sharpening is widely used in printing and photographic industries for increasing the local contrast and sharpening the images.
@@ -237,7 +244,7 @@
 	</div>
 
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="laplace" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="laplace" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block lgFourthRow text-center mdSixthRow">
 				Laplacian of an image a derivative which is used to find edges in an image. The major difference between Laplacian and other operators like Prewitt, Sobel, Robinson and Kirsch is that these all are first order derivative masks but Laplacian is a second order derivative mask
@@ -248,7 +255,7 @@
 	<div class="container col-md-12 col-lg-12 col-sm-12 col-xs-12"  >
 		<div class="row">
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12 col-lg-offset-2">
-		<canvas id="sobelX" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="sobelX" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center lgFivthRow mdSeventhRow">
 				Image gradient (derivative) is used for edge detection in an image. It detects edges in X-direction. 
@@ -259,7 +266,7 @@
 	</div>
 
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
-		<canvas id="sobelY" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="sobelY" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center lgFivthRow mdSeventhRow">
 				Image gradient (derivative) is used for edge detection in an image. It detects edges in Y-direction. 
@@ -280,7 +287,7 @@
 	<div class="container col-md-12 col-lg-12 col-sm-12 col-xs-12"  >
 		<div class="row">
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12 col-md-offset-3 col-lg-offset-4">
-		<canvas id="magnitude" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="magnitude" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center">
 				Magnitude of gradient: compute the horizontal and vertical image
@@ -295,7 +302,7 @@
 	<div class="container col-md-12 col-lg-12 col-sm-12 col-xs-12"  >
 		<div class="row">
 	<div class="col-md-6 col-lg-4 col-sm-12 col-xs-12 col-md-offset-3 col-lg-offset-4">
-		<canvas id="cannyEdge" width="400" height="400" class="center-block image-canvas"></canvas>
+		<canvas id="cannyEdge" width="" height="" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center">
 		The Canny edge detector is an edge detection operator that uses a multi-stage algorithm to detect a wide range of edges in images. 

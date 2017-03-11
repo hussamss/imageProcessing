@@ -36,7 +36,7 @@ button {
 }
 div.well {
   background-color: #e6e6e6;
-  width: 404px;
+  width: 400px;
   border: 2px solid #e6e6e6;;
   height: auto;
 }
@@ -46,13 +46,19 @@ div#headContent {
 }
 
 img.imgCon {
+      width: 400px;
+      height: 400px;
       border: 2px solid #000;
 }
 canvas {
+      width: 400px;
+      height: 400px;
       border: 2px solid #000;
       border-radius: 5px;
 }
 video {
+      width: 400px;
+      height: 400px;
       border: 2px solid #000;
 }
 
@@ -62,27 +68,27 @@ video {
 
   div.lgFirstRow {
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 120px;
       /*opacity: .6;*/
   }  
   div.lgSecondRow {
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 200px;
       /*opacity: .6;*/
   }
   div.lgThridRow  {
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 160px;
   }
   div.lgFourthRow{
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 180px;
   }
@@ -93,43 +99,43 @@ video {
   
     div.mdFirstRow{
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 120px;
   }
   div.mdSecondRow{
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 180px;
   }
   div.mdThirdRow{
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 200px;
   }
   div.mdFourthRow{
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 140px;
   }
   div.mdFivthRow{
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 180px;
   }
   div.mdSixthRow{
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 180px;
   }
   div.mdSeventhRow{
       background-color: #e6e6e6;
-      width: 404px;
+      width: 400px;
       border: 2px solid #e6e6e6;
       height: 170px;
   }
@@ -149,9 +155,40 @@ video {
   
 
 }
-@media (max-width: 497px){
+@media (max-width: 400px){
+  #header{
+    width: 375px;
+  }
   
-  
+div.well {
+  background-color: #e6e6e6;
+  width: 375px;
+  border: 2px solid #e6e6e6;;
+  height: auto;
+}
+
+div#headContent {
+  width: 375px;
+}
+
+img.imgCon {
+      width: 375px;
+      height: 400px;
+      border: 2px solid #000;
+}
+canvas {
+      width: 375px;
+      height: 400px;
+      border: 2px solid #000;
+      border-radius: 5px;
+}
+video {
+      width: 375px;
+      height: 400px;
+      border: 2px solid #000;
+}
+
+
 }
   
   
