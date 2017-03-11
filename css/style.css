@@ -45,16 +45,16 @@ div#headContent {
   width: auto;
 }
 
-  img {
+img.imgCon {
       border: 2px solid #000;
-    }
-    canvas {
+}
+canvas {
       border: 2px solid #000;
       border-radius: 5px;
-    }
-    video {
+}
+video {
       border: 2px solid #000;
-    }
+}
 
 
 
