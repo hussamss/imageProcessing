@@ -70,10 +70,10 @@
 	<div class=" well head center-block col-md-12 col-lg-12 col-sm-12 col-xs-12" id="headContent">
 		<p> <b>An Digital Image </b> generally is nothing more than a two dimensional (2D array) signal. It is defined by the mathematical function <i>I(x,y)</i> where <i>x and y</i> are the horizontal and vertical co-ordinates. The value of <i>I(x,y)</i> at any point gives the pixel values at that point of an image. 	
 		</p>
-		<p>Colored Image is the one type of digital images; however, the value of <i>I(x,y)</i> at any point gives the Red, Green, and Blue (R,G,B) pixel values at that point of an image. For example, a (200x200) RGB image consists of (200x200) red pixels, (200x200) green pixels and (200x200) blue pixels. Each pixel value has a values between 0-255</p>
+		<p>RGB, Colored Image is the one type of digital images; however, the value of <i>I(x,y)</i> at any point gives the Red, Green, and Blue (R,G,B) pixel values at that point of an image. For example, a <i>(200x200)</i> RGB image consists of <i>(200x200)</i> red pixels, <i>(200x200)</i> green pixels and <i>(200x200)</i> blue pixels. Each pixel value has a values between <i>0-255</i></p>
 		<hr>
 		<p> <b>Digital Image processing </b>is a method to perform some operations on an image, in order to get an enhanced image or to extract some useful information from it. It is a type of signal processing in which input is an image and output may be image or characteristics/features (such image edges) associated with that image.</p>
-		<p>Here, a demo example for basic image processing methods and an application of canny edge detection. You can test several images or you can snap and test your camera images. For better understanding of digital image processing, try the RGB circles image first</p>		
+		<p>Here, a demo example for various image processing filtering methods and canny edge detection application. You can test several images or you can snap and test images from your camera. For better understanding of digital image processing, start with the RGB circles image first</p>		
 	</div>
 </div>
 </div>
@@ -129,7 +129,7 @@
 			<canvas class="center-block" id="myImage2" width="400" height="400"></canvas>
 			<br>
 			<div class="well center-block text-center">
-			Thie is a ( 400 x 400) RGB image (Colored Image). Any color in general can be formed by combining (R,G,B). For example, White color is equivalent to (R=255, G=255, B=255). On the other hand, Black color is equivalent (R=0, G=0, B=0). Notice that this image consists of two red circles, two green circle, and two blue circles. When, the two different circles overlap, another color is formed; notice (red and green = yellow); yellow is equivalent to (R=255, G=255, B=0). Moreover, when the three circles overlap, you can see a while color.	
+			Thie is a <i>(400x400)</i> RGB image (Colored Image). Any color in general can be formed by combining (R,G,B). For example, White color is equivalent to <i>(R=255, G=255, B=255)</i>. On the other hand, Black color is equivalent (R=0, G=0, B=0). Notice that this image consists of two red circles, two green circle, and two blue circles. When, the two different circles overlap, another color is formed; notice (red and green = yellow); yellow is equivalent to (R=255, G=255, B=0). Moreover, when the three circles overlap, you can see a while color.	
 			</div>
 			</div>
 		</div>
@@ -184,7 +184,7 @@
 		<canvas id="gray" width="400" height="400" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center lgSecondRow mdSecondRow">
-				A gray scale image can be obtained from RGB image using many algorithms such as averging of RGB pixels or <!-- which the gray scale images' new R, G, and B pixels equal to average (R/3 + G/3 + B/3). --> luminosity method <!-- averages the pixel values and --> accounts for human perception. We’re more sensitive to green, so green is weighted heavily, luminosity formula is 0.21 R + 0.72 G + 0.07 B.
+				A gray scale image can be obtained from RGB image using many algorithms such as averging of RGB pixels or <!-- which the gray scale images' new R, G, and B pixels equal to average (R/3 + G/3 + B/3). --> luminosity method <!-- averages the pixel values and --> which accounts for human perception. We’re more sensitive to green, so green is weighted heavily, luminosity formula is 0.21 R + 0.72 G + 0.07 B.
 		<br>
 		<button class="filter center-block" id="grayButton">Gray Photo</button>
 		</div>
@@ -194,7 +194,7 @@
 		<canvas id="sepia" width="400" height="400" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block text-center lgSecondRow mdThirdRow">
-				Sepia is a reddish-brown color. Sepia effects gives an image a new image tone in which the picture appears in shades of brown as opposed to greyscale as in a black-and-white image. Compare the Grayscale image with Sepia image
+				Sepia is a reddish-brown color. Sepia effects gives an image a new tone in which the picture appears in shades of brown as opposed to greyscale as in a black-and-white image. Compare the Grayscale image with Sepia image
 		<br>
 		<button class="filter center-block" id="sepiaButton">Sepia (Riddesh Brown) Photo</button>
 		</div>
@@ -222,7 +222,7 @@
 		<canvas id="threshold" width="400" height="400" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block lgThridRow text-center mdFourthRow">
-				Thresholding is the simplest method of image segmentation. From a grayscale image, thresholding can be used to create binary images black <!-- and white values (0, 255). In thresholding, a threshold value is compared with the gray scale pixel, if threshold is bigger then sets pixel to 0; otherwise, set to 255. -->
+				Thresholding is the simplest method of image segmentation. From a grayscale image, thresholding can be used to create binary images. <!-- and white values (0, 255). In thresholding, a threshold value is compared with the gray scale pixel, if threshold is bigger then sets pixel to 0; otherwise, set to 255. -->
 		<br>
 		<button class="threshold center-block" ">Thresholded Photo</button>
 		</div>
@@ -239,7 +239,7 @@
 		<canvas id="gaussian3" width="400" height="400" class="center-block image-canvas"></canvas>
 		<br>
 		<div class="well center-block lgThridRow text-center mdFourthRow">
-				Gaussian blur (Gaussian smoothing - lowpass) is the result of blurring an image by a Gaussian function. It is a widely used effect <!-- in image processing and graphics software, typically to reduce image noise and reduce detail. -->
+				Gaussian blur (Gaussian smoothing - lowpass filtering) is the result of blurring an image by a Gaussian function. It is a widely used effect <!-- in image processing and graphics software, typically to reduce image noise and reduce detail. -->
 		<br>
 		<button class="convolution center-block" id="gaussian3Button">Gaussian 3 filtering (Blur)</button>
 		</div>
