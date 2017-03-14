@@ -6,9 +6,9 @@ and the pixel values.
 
 function arrangePlotPixels(ctx, img, imgPixels){
   
-  var dataArr = new Uint8ClampedArray(img.data.length);                 // create 8-bit unsigned integers to store image pixel values for plotting
+  var dataArr = new Uint8ClampedArray(img.data.length); // create 8-bit unsigned integers to store image pixel values for plotting
   
-  for (var i = 0, len = dataArr.length; i < len; i+=4) {                // arrange the RGB pixel and alpha values in the image Array
+  for (var i = 0, len = dataArr.length; i < len; i+=4) {// arrange the RGB pixel and alpha values in the image Array
     
     dataArr[i] = imgPixels.data[i];
     dataArr[i+1] = imgPixels.data[i+1];
@@ -16,8 +16,8 @@ function arrangePlotPixels(ctx, img, imgPixels){
     dataArr[i+3] = imgPixels.data[i+3];
   }
 
-  img.data.set(dataArr);                                                //Set the Array of unsign integer to img 
-  ctx.putImageData(img, 0, 0);                                          //Plot the img 
+  img.data.set(dataArr); //Set the Array of unsign integer to img 
+  ctx.putImageData(img, 0, 0);//Plot the img 
 }
 
 
@@ -52,40 +52,40 @@ return the pixel of the new filter image
 */
 function convolution(Image,ctx, kernelFil){
 
-	   var kerSize = Math.round(Math.sqrt(kernelFil.length));             // Get the kernel size
-     var halfKerSize = Math.floor(kerSize/2);                           // Get half the kernal size
-     var srcImage = Image.data;                                         // Get the image data (pixels)
-     var rows = Image.width;                                            // Get the width as rows
-     var columns = Image.height;                                        // Get the hieght as columns
+	   var kerSize = Math.round(Math.sqrt(kernelFil.length));// Get the kernel size
+     var halfKerSize = Math.floor(kerSize/2);// Get half the kernal size
+     var srcImage = Image.data;// Get the image data (pixels)
+     var rows = Image.width;// Get the width as rows
+     var columns = Image.height;// Get the hieght as columns
  
-     var newPixels = ctx.createImageData(rows, columns);                // Create newPixel with the original size(W, H)
-     // var dataArr = new Uint8ClampedArray(newPixels.data.length);     //
-                                                                        // Apply the 2D convolution by passing the kernel function over the image pixels and multiply and add
-    for (var y = 0; y < columns; y++) {                                 // y: 0-columns
+     var newPixels = ctx.createImageData(rows, columns);// Create newPixel with the original size(W, H)
+   
+    // Apply the 2D convolution by passing the kernel function over the image pixels and multiply and add
+    for (var y = 0; y < columns; y++) {// y: 0-columns
 
-    	for (var x = 0; x < rows; x++) {                                  // x: 0-rows
+    	for (var x = 0; x < rows; x++) {// x: 0-rows
 
-      		var dstIndex = (y * rows + x) * 4,                            // The dstIndex, initialize and set the RGB and alpha to zeros
-          	redPixel = 0,                                                  
+      		var dstIndex = (y * rows + x) * 4;// The dstIndex, initialize and set the RGB and alpha to zeros
+          var redPixel = 0,                                                  
           	greenPixel = 0,
           	bluePixel = 0,
           	alpha = 0;
 
-      		for (var ii = 0; ii < kerSize; ii++) {                        // ii: 0 kernel size
-        		for (var jj = 0; jj < kerSize; jj++) {                      // jj: 0 kernel size
+      		for (var ii = 0; ii < kerSize; ii++) { // ii: 0 kernel size
+        		for (var jj = 0; jj < kerSize; jj++) {// jj: 0 kernel size
 
-          			var iiCurrent = y + ii - halfKerSize;                   // the current row of 
+          			var iiCurrent = y + ii - halfKerSize; // the current row of 
               	var jjCurrent = x + jj - halfKerSize;
-                  
-          			if (iiCurrent >= 0 &&                                   // this if condition to make sure that the convolution is done with in the size of original signal
-          			    iiCurrent < columns &&
+                // this if condition to make sure that the convolution is done with in the size of original signal
+          			if (iiCurrent >= 0 &&                                   
+                    iiCurrent < columns &&
           			    jjCurrent >= 0 &&
           			    jjCurrent < rows) {
 
-            				var srcIndex = (iiCurrent * rows + jjCurrent) * 4,  // the index of the source pixels 
-                			coff = kernelFil[ii * kerSize + jj];              // the coeff of the filter kernal
+            				var srcIndex = (iiCurrent * rows + jjCurrent) * 4;// the index of the source pixels 
+                		var coff = kernelFil[ii * kerSize + jj];// the coeff of the filter kernal
                       // console.log(ii * kerSize + jj)
-            				redPixel += srcImage[srcIndex] * coff;              // multiply and add for convolution
+            				redPixel += srcImage[srcIndex] * coff;// multiply and add for convolution
             				greenPixel += srcImage[srcIndex + 1] * coff;
             				bluePixel += srcImage[srcIndex + 2] * coff;
 
@@ -93,7 +93,7 @@ function convolution(Image,ctx, kernelFil){
         		}
       		}
 
-      		newPixels.data[dstIndex] = redPixel;                          // Arranging the (RGB pixels) data in the in the distination image data
+      		newPixels.data[dstIndex] = redPixel;// Arranging the (RGB pixels) data in the in the distination image data
       		newPixels.data[dstIndex+1] = greenPixel;
       		newPixels.data[dstIndex+2] = bluePixel;
       		newPixels.data[dstIndex+3] = 255;
